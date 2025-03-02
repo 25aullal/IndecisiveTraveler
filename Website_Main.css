@@ -249,3 +249,45 @@ iframe {
        border-color: transparent;
    }
 }
+
+
+
+.faq-container {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.faq-container h1 {
+    text-align: center;
+}
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+}
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    border-left: 1px solid #66a7ed;
+    margin-top: 2px;
+    border-radius: 5px;
+}
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"]:checked + .faq-answer {
+    display: block;
+}
