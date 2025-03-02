@@ -74,6 +74,11 @@
    flex-direction: column;
    text-align: end;
    align-items: end;
+   text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.6),  /* Shadow to the right and down */
+        -2px -2px 4px rgba(0, 0, 0, 0.6), /* Shadow to the left and up */
+        2px -2px 4px rgba(0, 0, 0, 0.6),  /* Shadow to the left and down */
+        -2px 2px 4px rgba(0, 0, 0, 0.6);  /* Shadow to the right and up */
  }
  .text-box h1 {
    font-size: 70px;
@@ -82,7 +87,7 @@
  }
  .text-box h2 {
    font-size: 25px;
-   color: black;
+   color: #c0fdfb;
    margin-top: 10px;
  }
  .text-box p {
