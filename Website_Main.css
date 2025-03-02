@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position:fixed;
+
+}
+
+.Home{
+    min-height: 100vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 30px 80px;
+    position: relative;
+    overflow: hidden;   
+}
+.text-box{
+    width: 44%;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    align-items: end;
+}
+
+.text-box h1{
+    font-size: 70px;
+    color:#23dcbb;
+}
