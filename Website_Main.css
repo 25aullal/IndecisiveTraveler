@@ -160,7 +160,7 @@
    margin-top: 5px;
    margin-bottom: -3px;
    font-size: 16px; 
-   color: #333; 
+   color: black; 
 }
 .AU-C h1{
    margin-top: 20px;
@@ -183,12 +183,12 @@
 }
 
 .mission span {
-   text-align: center;
-   display: inline-block; 
-   padding: 20px; 
-   margin: 20px 20px; /* Centers the box horizontally */
-   background-color: #f0f0f0; /* Optional: Adds a background color to the box */
-   border-radius: 10px; /* Optional: Rounds the corners of the box */
-   font-size: 16px; /* Adjusts the font size */
-   line-height: 1.5; /* Improves readability */
+   font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Choose a fun font */
+   font-size: 20px; /* Set font size */
+   font-weight: bold; /* Make the text bold for a cartoonish effect */
+   color: white; /* Choose a vibrant text color, like a red or orange */
+   letter-spacing: 2px; /* Spacing between letters to make it bubbly */
+   text-align: center; /* Centers the text */
+   padding: 10px; /* Adds padding for spacing around the text */
+   display: inline-block;
 }
