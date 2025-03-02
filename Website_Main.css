@@ -193,6 +193,7 @@
    -webkit-text-fill-color: transparent;
    -webkit-text-stroke: 1px rgba(255,255,255,0.6);
    font-size: bold;
+   text-align: center;
 }
 .musicB button {
    border-radius: 15px;
@@ -202,8 +203,9 @@
    background-color: lightgreen;
    cursor: pointer;
    text-align: center;
-   max-width: 100%;
+   width: 99%;
    margin-left: 5px;
+  
    margin-bottom: 10px;
 }
 
@@ -213,9 +215,10 @@
 
 iframe {
    width: 100%;
-   max-width: 800px;
    height: 380px;
    border: none;
+   justify-content: center;
+   align-items: center;
 }
 .typewriter {
    font-size: 18px;
