@@ -62,7 +62,7 @@ def ask_openai(place_of_interest: str, current_interests: list, budget: float, w
         return f"Error while communicating with OpenAI: {e}"
 
 if __name__ == "__main__":
-    place_of_interest = input("Where do you want to go? ").strip()
+    place_of_interest = input("Where do you want to go?").strip()
     raw_interests = input("What are your current interests?").strip()
     weather_preference = input("What kind of weather do you prefer?").strip()
 
