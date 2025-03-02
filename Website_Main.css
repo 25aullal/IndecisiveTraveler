@@ -20,6 +20,8 @@
    color: black;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
    z-index:99;
+   opacity: 0;
+   animation: to_bottom 1s ease forwards;
  }
  .header img {
    top: 3px;
@@ -79,16 +81,22 @@
         -2px -2px 4px rgba(0, 0, 0, 0.6), 
         2px -2px 4px rgba(0, 0, 0, 0.6),  
         -2px 2px 4px rgba(0, 0, 0, 0.6);  
+        animation: to_left 1s ease forwards .8s;
+ }
+ .text-box *{
+   opacity: 0;
  }
  .text-box h1 {
-   font-size: 70px;
+   font-size: 100px;
    color: #23dcbb;
    margin-top: -125px;
+   animation: to_left 1s ease forwards .8s;
  }
  .text-box h2 {
-   font-size: 25px;
+   font-size: 45px;
    color: #c0fdfb;
    margin-top: 10px;
+   animation: to_left 1s ease forwards .9s;
  }
  .text-box p {
    margin-top:10px;
@@ -258,10 +266,9 @@ iframe {
 .faq-container {
     width: 100%;
     background-color: #f8f9fa;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .faq-container h1 {
     text-align: center;
 }
@@ -274,7 +281,7 @@ iframe {
     font-weight: bold;
     cursor: pointer;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #4086d1;
     color: white;
     border-radius: 5px;
     display: block;
@@ -293,4 +300,33 @@ input[type="checkbox"] {
 }
 input[type="checkbox"]:checked + .faq-answer {
     display: block;
+}
+
+@keyframes to_bottom {
+   0%{
+      opacity: 0;
+      transform: translateY(-50px);
+}100%{
+      opacity: 1;
+      transform: translateY(0);
+}
+}
+
+@keyframes to_left {
+   0%{
+      opacity: 0;
+      transform: translateX(50px);
+}100%{
+      opacity: 1;
+      transform: translateX(0);
+}
+}
+@keyframes to_top {
+   0%{
+      opacity: 0;
+      transform: translateY(50px);
+}100%{
+      opacity: 1;
+      transform: translateY(0);
+}
 }
