@@ -7,45 +7,28 @@ from openai import OpenAI
 
 dotenv.load_dotenv()
 
-# Gets API Key Access
 api_key = os.getenv("OPENAI_API_KEY")
 
-# Test Out API Key
 try:
     client = OpenAI(api_key=api_key)
 except Exception as error:
     raise SystemExit(f"Terminating: Failed to initialize OpenAI client. Error: {error}")
 
-
-# Variables Being Asked of For Prompt
 def ask_openai(place_of_interest: str, current_interests: list, budget: float, weather_preference: str,
                stay_duration: int, numOfPeople: float, food_preference: str):
-    #No Destination Error
     if not place_of_interest:
         raise ValueError("Place of interest cannot be empty.")
-
-    #No Current Interests Error
     if not isinstance(current_interests, list) or not all(isinstance(i, str) for i in current_interests):
         raise ValueError("Current interests must be a list of strings.")
-
-    #No Budget or Negative Budget Error
     if not isinstance(budget, (int, float)) or budget <= 0:
         raise ValueError("Budget must be a positive number.")
-
-    #No Weather Preference Error
     if not weather_preference:
         raise ValueError("Weather preference cannot be empty.")
-
-    #No Stay Duration Error
     if not isinstance(stay_duration, int) or stay_duration <= 0:
         raise ValueError("Stay duration must be a positive integer.")
-
-    #No Food Preference Error
     if not food_preference:
         raise ValueError("Food preference cannot be empty.")
-
-    # No Number of People or Not 1 Person Error
-    if not isinstance(numOfPeople, (int, float)) or numOfPeople <= 0:
+    if not isinstance(numOfPeople, (int, float)) or numOfPeople <= 1:
         raise ValueError("Must have more than one person on trip")
 
     interests_str = ", ".join(current_interests)
@@ -65,8 +48,7 @@ def ask_openai(place_of_interest: str, current_interests: list, budget: float, w
                 "Once you are done, give the response in an .html format so it can be paster well in a website. ""With this .html response, get rid of the html and body sections since we already have one. "
                 "Only implement the parts that do not say anything html related, only start with our heading title, assuring getting rid of html, doctype, etc... only formatting for the text. Start with our list heading and do not include ''' or '''html before and after. "
                 "With the response, put a recommendation of three hotels in close budget and include approximate prices per person for that stay""Make sure to add the amount of people in the title for ___ day trip to ____ with ____ people. ""Finally, assure that the map link"
-                "is functional and does not encounter any errors when pressed.""At the end, include a total estimated cost breaking down estimated costs of the trip.")
-
+                "is functional and does not encounter any errors when pressed.")
     try:
         response = client.chat.completions.create(
             model="gpt-4o",
