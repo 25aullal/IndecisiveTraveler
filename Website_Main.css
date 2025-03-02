@@ -75,10 +75,10 @@
    text-align: end;
    align-items: end;
    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.6),  /* Shadow to the right and down */
-        -2px -2px 4px rgba(0, 0, 0, 0.6), /* Shadow to the left and up */
-        2px -2px 4px rgba(0, 0, 0, 0.6),  /* Shadow to the left and down */
-        -2px 2px 4px rgba(0, 0, 0, 0.6);  /* Shadow to the right and up */
+        2px 2px 4px rgba(0, 0, 0, 0.6), 
+        -2px -2px 4px rgba(0, 0, 0, 0.6), 
+        2px -2px 4px rgba(0, 0, 0, 0.6),  
+        -2px 2px 4px rgba(0, 0, 0, 0.6);  
  }
  .text-box h1 {
    font-size: 70px;
@@ -226,13 +226,13 @@ iframe {
    font-weight: bold; 
    color: white; 
    letter-spacing: 2px; 
-   text-align: center;  /* Or 'left' for left-aligned text */
+   text-align: center;  
    padding: 10px;
-   display: block; /* Allow text to be displayed as a block element */
+   display: block; 
    animation: typing 5s steps(50) 1s forwards, blink 0.75s step-end infinite;
    word-wrap: break-word; 
    word-break: break-word;
-   max-width: 100%; /* Ensures it doesn’t overflow its container */
+   max-width: 100%; 
 }
 
 @keyframes typing {
